@@ -1408,8 +1408,8 @@ a.bg-danger:focus {
   background-color: #e4b9b9;
 }
 .page-header {
-  padding-bottom: 9px;
-  margin: 40px 0 20px;
+  padding-bottom: 5px;
+  margin: 10px 0 2px;
   border-bottom: 1px solid #eee;
 }
 ul,
@@ -3510,6 +3510,13 @@ tbody.collapse.in {
   border-right: 4px solid transparent;
   border-left: 4px solid transparent;
 }
+.divider-vertical {
+    height: 60px;
+    margin: 2px;
+
+    border-right: 5px solid #e3f2fd;
+}
+
 .dropup,
 .dropdown {
   position: relative;
@@ -4322,6 +4329,16 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-nav {
   margin: 7.5px -15px;
+}
+
+.navbar-nav > li{
+  padding-left:20px;
+  padding-right:20px;
+}
+
+.navbar-nav > li{
+  margin-left:20px;
+  margin-right:20px;
 }
 .navbar-nav > li > a {
   padding-top: 10px;
