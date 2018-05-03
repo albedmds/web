@@ -1,7 +1,7 @@
 CREATE TABLE Entreprise
 (
-    Adresse_Entreprise  LONGCHAR,
-    Nom_Entreprise  LONGCHAR,
+    Adresse_Entreprise  LONGTEXT,
+    Nom_Entreprise  LONGTEXT,
     Code_Entreprise INTEGER,
     PRIMARY KEY (Code_Entreprise)
 );
@@ -16,7 +16,7 @@ CREATE TABLE Info_supplementaire_Perso
 
 CREATE TABLE Media
 (
-    Donnee_Media    LONGCHAR,
+    Donnee_Media    LONGTEXT,
     ID_Perso_Publieur   INTEGER DEFAULT VALUE 0,
     Code_Media  INTEGER,
     Type_Media  VARCHAR(255),
@@ -32,7 +32,7 @@ CREATE TABLE Message
     Id_Perso_2M INTEGER DEFAULT VALUE 0,
     Accuse_Reception    BIT DEFAULT VALUE No,
     Accuse_Lecture  BIT DEFAULT VALUE No,
-    Donnee_Message  LONGCHAR,
+    Donnee_Message  LONGTEXT,
     PRIMARY KEY (Code_Message)
 );
 
@@ -55,11 +55,11 @@ CREATE TABLE Parametre
 CREATE TABLE Personne
 (
     Code_Personne   INTEGER,
-    Nom LONGCHAR,
-    Prenom  LONGCHAR,
-    Pseudo  LONGCHAR,
-    Email   LONGCHAR,
-    Mot_de_passe    LONGCHAR,
+    Nom LONGTEXT,
+    Prenom  LONGTEXT,
+    Pseudo  LONGTEXT,
+    Email   LONGTEXT,
+    Mot_de_passe    LONGTEXT,
     PRIMARY KEY (Code_Personne)
 );
 
