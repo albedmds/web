@@ -3,7 +3,7 @@ $Email = isset($_POST["Email"])? $_POST["Email"]: "";
 $Nom = isset($_POST["Nom"])? $_POST["Nom"]: "";
 $Pseudo = isset($_POST["Pseudo"])? $_POST["Pseudo"]: "";
 $Mot_de_Passe = isset($_POST["Mot_de_Passe"])? $_POST["Mot_de_Passe"]: "";
-$database = "ece_connect_base";
+$database = "web";
 $db_handle = mysqli_connect('localhost','root','');
 $db_found = mysqli_select_db($db_handle, $database);
 if ($db_found) {
