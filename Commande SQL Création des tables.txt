@@ -8,8 +8,8 @@ CREATE TABLE Entreprise
 
 CREATE TABLE Info_supplementaire_Perso
 (
-    Id_Perso    INTEGER AUTO_INCREMENT
-    Id_Entreprise   INTEGER AUTO_INCREMENT
+    Id_Perso    INTEGER
+    Id_Entreprise   INTEGER
     Code_Info_Sup_Perso INTEGER AUTO_INCREMENT
     PRIMARY KEY (Code_Info_Sup_Perso)
 );
@@ -17,7 +17,7 @@ CREATE TABLE Info_supplementaire_Perso
 CREATE TABLE Media
 (
     Donnee_Media    LONGTEXT
-    ID_Perso_Publieur   INTEGER AUTO_INCREMENT
+    ID_Perso_Publieur   INTEGER
     Code_Media  INTEGER AUTO_INCREMENT
     Type_Media  VARCHAR(255)
     Horaire_Publication DATE
@@ -28,8 +28,8 @@ CREATE TABLE Message
 (
     Code_Message    INTEGER AUTO_INCREMENT
     Horaire_Envoi   DATE
-    Id_Perso_1M INTEGER AUTO_INCREMENT
-    Id_Perso_2M INTEGER AUTO_INCREMENT
+    Id_Perso_1M INTEGER
+    Id_Perso_2M INTEGER
     Accuse_Reception    BIT
     Accuse_Lecture  BIT
     Donnee_Message  LONGTEXT
@@ -39,16 +39,16 @@ CREATE TABLE Message
 CREATE TABLE Offre_Emploi
 (
     Intitulé    VARCHAR(255)
-    Id_Entreprise   INTEGER AUTO_INCREMENT
+    Id_Entreprise   INTEGER
     Code_Offre_Emploi   INTEGER AUTO_INCREMENT
     PRIMARY KEY (Code_Offre_Emploi)
 );
 
 CREATE TABLE Parametre
 (
-    Numero_Media    INTEGER AUTO_INCREMENT
+    Numero_Media    INTEGER
     Code_Parametre  INTEGER AUTO_INCREMENT
-    Degre_Confidentialite   INTEGER AUTO_INCREMENT
+    Degre_Confidentialite   INTEGER
     PRIMARY KEY (Code_Parametre)
 );
 
@@ -65,8 +65,8 @@ CREATE TABLE Personne
 
 CREATE TABLE Relation
 (
-    Id_Perso_1  INTEGER AUTO_INCREMENT
-    Id_Perso_2  INTEGER AUTO_INCREMENT
+    Id_Perso_1  INTEGER
+    Id_Perso_2  INTEGER
     Horaire_Relation    DATE
     Code_Relation   INTEGER AUTO_INCREMENT
     PRIMARY KEY (Code_Relation)
@@ -74,16 +74,16 @@ CREATE TABLE Relation
 
 CREATE TABLE Type_Relation
 (
-    Id_Utilisateur  INTEGER AUTO_INCREMENT
-    Id_Relation INTEGER AUTO_INCREMENT
-    Degre_Relation  INTEGER AUTO_INCREMENT
+    Id_Utilisateur  INTEGER
+    Id_Relation INTEGER
+    Degre_Relation  INTEGER
     Code_Type_Relation  INTEGER AUTO_INCREMENT
     PRIMARY KEY (Code_Type_Relation)
 );
 
 CREATE TABLE Utilisateur
 (
-    Numero_Perso    INTEGER AUTO_INCREMENT
+    Numero_Perso    INTEGER
     Droit   VARCHAR(255)
     Code_Utilisateur    INTEGER AUTO_INCREMENT
     PRIMARY KEY (Code_Utilisateur)
