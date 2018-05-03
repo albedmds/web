@@ -5,17 +5,16 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="../css/bootstrap.css" rel="stylesheet">
-  <link href="../css/bootstrap.css" rel="stylesheet">
-  <link href="../css/tuto.css" rel="stylesheet">
+  <link href="bootsrap-3.3.7/dist/css/bootstrap.css" rel="stylesheet">
+  <link href="bootsrap-3.3.7/dist/css/tuto.css" rel="stylesheet">
 
 </head>
 <body>
   <form id="Form" class="col-md-4 col-md-offset-4" action="inscription.php" methode="POST">
    <legend><h2>Inscription</h2></legend>
    <div class="form-group">
-    <label for="Email">Email : </label>
-    <input id="Email" type="text" class="form-control" name="Email" required>
+    <label for="choix1">Email : </label>
+    <input id="choix1" type="longtext" class="form-control" name="Email" required>
   </div>
   <div class="form-group">
     <label for="Pseudo">Pseudo : </label>
@@ -33,7 +32,7 @@
     <label for="Mdp" class="col-form-label">Mot de passe : </label>
     <input name="Mdp" id="Mdp" type="password" class="form-control"  aria-describedby="passwordHelpBlock" required> 
     <p id="passwordHelpBlock" class="form-text text-muted">
-      Veuillez saisir un mot de passe entre 8-20 charactère, sans caractère spéciaux.
+      Veuillez saisir un mot de passe entre 8-20 charactère, sans caractère spéciaux (',",(,),/).
     </p>
   </div>
 
