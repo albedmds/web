@@ -10,8 +10,9 @@
   <link href="../css/tuto.css" rel="stylesheet">
 
 </head>
+
 <body>
-  <nav class="navbar navbar-light" style="background-color: #e3f2fd;"  role="navigation">
+  <nav class="navbar navbar-light navbar-fixed-top" style="background-color: #e3f2fd;"  role="navigation">
     <div class="container-fluid">
       <div class="navbar-header">
         <a class="navbar-brand">
@@ -23,53 +24,58 @@
           <li class="active"><a href="web.html">Accueil</a></li>
           <li><a href="reseau.html">Mon réseau</a></li>
           <li><a href="emploi.html">Emplois</a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right ">
+          <li><form class="navbar-form"  action="#">
+            <div class="input-group" >
+              <input type="text" class="form-control" placeholder="Rechercher">
+              <div class="input-group-btn">
+                <button class="btn btn-default" type="submit">
+                  <i class="glyphicon glyphicon-search"></i></button>
+                </button>
+              </div>
+            </div>
+          </form></li>
           <li><a href="messages.html">Messages</a></li>
-
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="notification.html" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Notifications
-              <span class="caret"></span></a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-               <li><a class="dropdown-item" href="#">Action</a></li>
-               <li><a class="dropdown-item" href="#">Autre</a></li>
-             </ul>
-           </li>
-
-           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <li><a href="notification.html">Notification</a></li>
+          <li class="nav-dropdown">
+             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Vous
               <span class="caret"></span></a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <li><a class="dropdown-item" href="profil.html">Profil</a></li>
-                <li><a class="dropdown-item" href="#">Paramètre</a></li>
+                <li><a class="dropdown-item" href="paramètre.html">Paramètre</a></li>
                 <li><a class="dropdown-item" href="#">Se déconnecter</a></li>
               </ul>
             </li>
-
           </ul>
-          <ul>
-            <form class="navbar-form"  action="#">
-              <div class="input-group" >
 
-                <input type="text" class="form-control" placeholder="Rechercher">
-                <div class="input-group-btn">
-                  <button class="btn btn-default" type="submit">
-                    <i class="glyphicon glyphicon-search"></i></button>
-                  </button>
-
-                </div>
-              </div>
-            </form>
-          </ul>
         </div>
       </div>
     </nav>
 
-    <div class="row">
-      accueil
+    <div class="col-md-2 sidebar"  style="background-color: #e3f2fd;">
+      <h1>Publier</h1>
+      <form class="form">
+        <label for="publier">Ecrivez votre message</label>
+        <input type=text name=publier id="publier" class="form-control">
+        <button type="submit">Envoyer</button>
     </div>
+    <div class="col-md-4 sidebar col-md-offset-1 " style="background-color: #e3f2fd;">
+      <h1>Publication</h1>
+        <p class="publication">
+         <img src="../ressources/logoece.png" width="auto" height="28" class="d-inline-block align-top">
+          : Sympa le site
+        </p>
 
+        <p class="publication">
+          Ouai
+        </p>
+        </div>
+      </div>
+
+
+
+    </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+<script src="../js/bootstrap.js"></script>
     </html>
 
