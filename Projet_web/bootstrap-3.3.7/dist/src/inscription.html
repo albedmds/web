@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>ECE Connect</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../css/bootstrap.css" rel="stylesheet">
+  <link href="../css/bootstrap.css" rel="stylesheet">
+  <link href="../css/tuto.css" rel="stylesheet">
+
+</head>
+<body>
+  <form id="Form" class="col-md-4 col-md-offset-4" action="inscription.php" method="POST">
+   <legend><h2>Inscription</h2></legend>
+   <div class="form-group">
+    <label for="Email">Email : </label>
+    <input id="Email" type="text" class="form-control" name="Email" required>
+  </div>
+  <div class="form-group">
+    <label for="Pseudo">Pseudo : </label>
+    <input name="Pseudo" id="Pseudo" type="text" class="form-control" required>
+  </div>
+  <div class="form-group">
+    <label for="Nom">Nom : </label>
+    <input name="Nom" id="Nom" type="text" class="form-control" required>
+  </div>
+  <div class="form-group">
+    <label for="Prenom">Prenom : </label>
+    <input name="Prenom" id="Prenom" type="text" class="form-control" required>
+  </div>
+  <div class="form-group">
+    <label for="Mdp" class="col-form-label">Mot de passe : </label>
+    <input name="Mdp" id="Mdp" type="password" class="form-control"  aria-describedby="passwordHelpBlock" required> 
+    <p id="passwordHelpBlock" class="form-text text-muted">
+      Veuillez saisir un mot de passe entre 8-20 charactère, sans caractère spéciaux.
+    </p>
+  </div>
+
+  <div class="form-group">
+    <label for="CMdp">Confirmation du Mot de passe : </label>
+    <input name="CMdp" id="CMdp" type="password" class="form-control" required>
+  </div>
+  <div class="row">
+    <div class="col-xs-2 col-xs-offset-1">
+      <a class="btn btn-primary"  role="buton" href="page.html">Retour</a>
+    </div>
+    <div class="col-xs-2 col-xs-offset-1"">
+      <button type="reset" class="btn btn-primary">Reinitialiser</button>
+      
+    </div>
+    <div class="col-xs-2 col-xs-offset-2">
+      <button type="submit" class="btn btn-primary">Valider</button>
+    </div>
+    
+  </div>
+</div>
+</form>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+<script src="../js/bootstrap.js"></script>
+</body>
+
+</html>
