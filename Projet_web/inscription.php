@@ -11,6 +11,7 @@ if ($db_found) {
 $sql = "INSERT INTO `personne`( `Nom`, `Prenom`, `Pseudo`, `Email`, `Mot_de_Passe`) VALUES ('$Nom', '$Prenom', '$Pseudo','$Email','$Mot_de_Passe')";
 $result = mysqli_query($db_handle, $sql);
 echo "Donnée rentrée.";
+header ('Location: inscription_uti.html');
 }
 else {
 echo "Donnée non rentrée.";
