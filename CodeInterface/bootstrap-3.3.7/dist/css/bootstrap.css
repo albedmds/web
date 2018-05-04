@@ -10,6 +10,7 @@ html {
       -ms-text-size-adjust: 100%;
 }
 body {
+  padding-top: 0px; 
   margin: 0;
 }
 article,
@@ -1114,8 +1115,9 @@ figure {
 }
 img {
   vertical-align: middle;
+
 }
-.img-responsive,
+g-responsive,
 .thumbnail > img,
 .thumbnail a > img,
 .carousel-inner > .item > img,
@@ -1309,6 +1311,19 @@ mark,
   padding: .2em;
   background-color: #fcf8e3;
 }
+
+textarea {
+  resize: none; 
+  width: 200px; 
+  min-width:200px; 
+  max-width:auto; 
+
+  height:200px; 
+  min-height:200px;  
+  max-height:auto;
+}
+
+
 .text-left {
   text-align: left;
 }
@@ -1587,6 +1602,36 @@ pre code {
   margin-right: auto;
   margin-left: auto;
 }
+
+.post {
+  width: auto;
+  height:100%;
+  margin-bottom: 100px;
+  padding-bottom: 40px;
+  padding-left: 10px;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+.sidebar {
+  width: auto;
+  height:100%;
+  margin-bottom: 100%;
+  padding-bottom: 100%;
+  padding-left: 2px;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+.contact {
+  width: auto;
+  height:100%;
+  margin-bottom: 100%;
+  padding-bottom: 80px;
+  padding-left: 2px;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
 @media (min-width: 768px) {
   .container {
     width: 750px;
@@ -4332,13 +4377,13 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-nav > li{
-  padding-left:20px;
+  padding-left:15px;
   padding-right:20px;
 }
 
 .navbar-nav > li{
-  margin-left:20px;
-  margin-right:20px;
+  margin-left:25px;
+  margin-right:15px;
 }
 .navbar-nav > li > a {
   padding-top: 10px;
@@ -6770,6 +6815,16 @@ button.close {
   .hidden-print {
     display: none !important;
   }
+}
+
+p.publication {
+background:#fff;
+border-top:2px solid #eeeeee;
+border-bottom:2px solid #eeeeee;
+border-right:2px solid #eeeeee;
+border-left:2px solid #eeeeee;
+
+padding:1em 1em 1em 2em;
 }
 
 /*# sourceMappingURL=bootstrap.css.map */
