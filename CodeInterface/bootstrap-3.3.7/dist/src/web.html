@@ -9,6 +9,7 @@
   <link href="../css/bootstrap.css" rel="stylesheet">
   <link href="../css/tuto.css" rel="stylesheet">
 
+
 </head>
 
 <body>
@@ -52,15 +53,18 @@
       </div>
     </nav>
 
-    <div class="col-md-2 sidebar"  style="background-color: #e3f2fd;">
+    <div class="col-md-3 post "  style="background-color: #e3f2fd;">
       <h1>Publier</h1>
       <form class="form">
         <label for="publier">Ecrivez votre message</label>
-        <input type=text name=publier id="publier" class="form-control">
-        <button type="submit">Envoyer</button>
+        <textarea type="text" name="publier" id="publier" rows="2" class="form-control"></textarea>
+        <div class="row-fluid">
+        <button type="submit" class="btn btn-primary">Envoyer</button>
+        <button type="submit" class="btn btn-primary">Ajouter une pièce jointe</button>
+      </div>
     </div>
-    <div class="col-md-4 sidebar col-md-offset-1 " style="background-color: #e3f2fd;">
-      <h1>Publication</h1>
+    <div class="col-md-5 sidebar" style="background-color: #e3f2fd;">
+      <h1>Fil d'actualité</h1>
         <p class="publication">
          <img src="../ressources/logoece.png" width="auto" height="28" class="d-inline-block align-top">
           : Sympa le site
@@ -71,7 +75,13 @@
         </p>
         </div>
       </div>
+      <div class="col-md-3 contact"    style="background-color: #e3f2fd;">
+      <h1>Amis</h1>
+      <div class="panel" style="height:500px">
 
+      </div>
+
+    </div>
 
 
     </div>
