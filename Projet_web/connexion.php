@@ -6,21 +6,18 @@ $db_handle = mysqli_connect('localhost','root','');
 $db_found = mysqli_select_db($db_handle, $database);
 $testconnex=false;
 if ($db_found) {
-$sql = "SELECT * FROM `auteur`";
+$sql = "SELECT * FROM `personne`";
 $result = mysqli_query($db_handle, $sql);
 while($resultat=mysqli_fetch_assoc($result)){
-if (($resultat['Email']==$Email)&&($resultat['Mot_de_Passe']==$Mot_de_Passe)){
+if (($resultat['Email']==$Email)&&($resultat['Mot_de_passe']==$Mot_de_Passe)){
 $testconnex=true;
-}
-else{
-$testconnex=false;
 }
 }
 if($testconnex==true){
 echo "Connexion établie. Bienvenue!!";
 }
-else{
-echo "Connexion Impossible, Mot de Passe ou Identifiant faux";
+else {
+echo "Connexion impossible, Identifiant ou Mot de Passe incorrect.";
 }
 }
 else {
