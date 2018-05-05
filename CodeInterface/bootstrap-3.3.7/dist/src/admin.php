@@ -66,7 +66,7 @@ if ($db_found) {
            .$resultat->Code_Personne."  ".$resultat->Nom." ".$resultat->Prenom." ".$resultat->Pseudo." ".$resultat->Email." ".$resultat->Mot_de_passe." "
            ." <a href=\"modification.php?idPersonne=".$resultat->Code_Personne."\" class=\"btn btn-default\">modifier</a>"."    "
            ." <a href=\"supprimer.php?idPersonne=".$resultat->Code_Personne."\" class=\"btn btn-default\">supprimer</a></div>"          
-       ) ;		
+       );		
 	}	
 }
 ?>
