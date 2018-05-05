@@ -1642,6 +1642,16 @@ pre code {
   margin-left: 15px;
 }
 
+.espace {
+  width: auto;
+  height:20px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  padding-left: 2px;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
 .cv {
   width: auto;
   height:100%;
