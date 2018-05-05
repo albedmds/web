@@ -1,4 +1,5 @@
 <?php
+session_start();
 $Email = isset($_POST["Email"])? $_POST["Email"]: "";
 $Mot_de_Passe = isset($_POST["Mdp"])? $_POST["Mdp"]: "";
 $database = "prjet_web";
@@ -11,10 +12,12 @@ $result = mysqli_query($db_handle, $sql);
 while($resultat=mysqli_fetch_assoc($result)){
 if (($resultat['Email']==$Email)&&($resultat['Mot_de_passe']==$Mot_de_Passe)){
 $testconnex=true;
+$_SESSION['ID']=$resultat['Code_Personne'];
 }
 }
 if($testconnex==true){
 echo "Connexion établie. Bienvenue!!";
+header('Location: publication.html');
 }
 else {
 echo "Connexion impossible, Identifiant ou Mot de Passe incorrect.";
