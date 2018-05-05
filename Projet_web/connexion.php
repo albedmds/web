@@ -13,6 +13,7 @@ while($resultat=mysqli_fetch_assoc($result)){
 if (($resultat['Email']==$Email)&&($resultat['Mot_de_passe']==$Mot_de_Passe)){
 $testconnex=true;
 $_SESSION['ID']=$resultat['Code_Personne'];
+$_SESSION['Nom']=$resultat['Nom'];
 }
 }
 if($testconnex==true){

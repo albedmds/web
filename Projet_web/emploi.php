@@ -10,8 +10,10 @@ $sql = "SELECT * FROM `entreprise`";
 $result = mysqli_query($db_handle, $sql);
 while($resultat=mysqli_fetch_assoc($result)){
 if ($resultat['Nom_Entreprise']==$Activite){
+$_SESSION['Nom_Ent']=$resultat['Nom_Entreprise'];
 echo $resultat['Adresse_Entreprise'];
 echo $resultat['Nom_Entreprise'];
+header ('Location: emploi3.html');
 }
 }
 }
