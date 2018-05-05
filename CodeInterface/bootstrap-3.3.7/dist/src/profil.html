@@ -48,22 +48,25 @@
             </ul>
           </li>
         </ul>
-
       </div>
     </div>
   </nav>
 
-  <section class="row-fluid">
+  <section class="row">
     <div class="col-xs-5 col-sm-4 col-md-3 photo "  style="background-color: #e3f2fd;">
       <h1 class="text-center">Albéric de Monts</h1>
-      <img responsive src="../ressources/image.png" width="100%" class="img-circle">
+      <div class="cadre">
+      <img  src="../ressources/image.jpg" width="100%" class="img-circle">
+    </div>
+    <div class="row" style="height: 30px">
+    </div>
       <div class="container-fluid">
         <form enctype="multipart/form-data" action="joindre.php" method="post">
           <fieldset>
             <p>
-              <label for="fichier_a_uploader" title="Recherchez le fichier à uploader !">Modifier la photo de profil:</label>
-              <input type="hidden" name="MAX_FILE_SIZE" value="104858" />
-              <input name="fichier" type="file" id="fichier_a_uploader" />
+              <label for="fichier" title="Recherchez le fichier à uploader !">Modifier la photo de profil:</label>
+              <input type="hidden" name="MAX_FILE_SIZE" value="<?php echo MAX_SIZE; ?>" />
+              <input name="fichier" type="file" id="fichier" />
               <input type="submit" name="submit" value="Changer" />
             </p>
           </fieldset>

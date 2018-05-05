@@ -38,7 +38,7 @@ CREATE TABLE Message
 
 CREATE TABLE Offre_Emploi
 (
-    Intitulé    VARCHAR(255),
+    Intitule    VARCHAR(255),
     Id_Entreprise   INTEGER,
     Code_Offre_Emploi   INTEGER AUTO_INCREMENT,
     PRIMARY KEY (Code_Offre_Emploi)
@@ -61,6 +61,32 @@ CREATE TABLE Personne
     Email   LONGTEXT,
     Mot_de_passe    LONGTEXT,
     PRIMARY KEY (Code_Personne)
+);
+
+INSERT INTO Personne VALUES
+(
+ '1',
+ 'Tan',
+ 'Albert',
+ 'Alb',
+ 'albert.tan@edu.ece.fr',
+ 'adminAlbert'
+),
+(
+ '2',
+ 'Rinjard',
+ 'Yann',
+ 'Skyfire',
+ 'yann.rinjard@edu.ece.fr',
+ 'adminYann'
+),
+(
+ '3',
+ 'De-Monts',
+ 'Alberic',
+ 'Alberic',
+ 'alberic.de-monts@edu.ece.fr',
+ 'adminAlberic'
 );
 
 CREATE TABLE Relation
@@ -87,4 +113,21 @@ CREATE TABLE Utilisateur
     Droit   VARCHAR(255),
     Code_Utilisateur    INTEGER AUTO_INCREMENT,
     PRIMARY KEY (Code_Utilisateur)
+);
+
+INSERT into Utilisateur VALUES
+(
+ '1',
+ 'Admin',
+ '1'
+),
+(
+ '2',
+ 'Admin',
+ '2'
+),
+(
+ '3',
+ 'Admin',
+ '3'
 );

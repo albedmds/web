@@ -1,6 +1,5 @@
 <?php
- 
-// Constantes
+
 define('TARGET', '../ressources/');    // Repertoire cible
  
 // Tableaux de donnees
@@ -12,6 +11,7 @@ $extension = '';
 $message = '';
 $nomImage = '';
  
+
 if(!empty($_POST))
 {
   // On verifie si le champ est rempli
@@ -37,7 +37,7 @@ if(!empty($_POST))
             && UPLOAD_ERR_OK === $_FILES['fichier']['error'])
           {
             // On renomme le fichier
-            $nomImage = 'image.jpg';
+            $nomImage = 'publication.jpg';
  
             // Si c'est OK, on teste l'upload
             if(move_uploaded_file($_FILES['fichier']['tmp_name'], TARGET.$nomImage))
@@ -76,11 +76,11 @@ if(!empty($_POST))
   else
   {
     // Sinon on affiche une erreur pour le champ vide
-    $message = 'Veuillez ajouter un fichier';
+    $message = 'Veuillez remplir le formulaire svp !';
   }
 }
 echo "<script>
 alert('$message');
-window.location.href='profil.html';  
+window.location.href='web.html';  
 </script>";
 ?>

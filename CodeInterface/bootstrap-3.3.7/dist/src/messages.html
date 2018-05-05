@@ -6,8 +6,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="../css/bootstrap.css" rel="stylesheet">
-  <link href="../css/bootstrap.css" rel="stylesheet">
-  <link href="../css/tuto.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+<script src="../js/bootstrap.js"></script>
+  <script src="../js/bootstrap.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $(".btn").click(function(){
+       $("#monModal").modal('show');
+     });
+    });
+  </script>
 
 </head>
 
@@ -37,58 +45,87 @@
           <li><a href="messages.html">Messages</a></li>
           <li><a href="notification.html">Notification</a></li>
           <li class="nav-dropdown">
-             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Vous
-              <span class="caret"></span></a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item" href="profil.html">Profil</a></li>
-                <li><a class="dropdown-item" href="paramètre.html">Paramètre</a></li>
-                <li><a class="dropdown-item" href="#">Se déconnecter</a></li>
-              </ul>
-            </li>
-          </ul>
+           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Vous
+            <span class="caret"></span></a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="profil.html">Profil</a></li>
+              <li><a class="dropdown-item" href="paramètre.html">Paramètre</a></li>
+              <li><a class="dropdown-item" href="deconnexion.php">Se déconnecter</a></li>
+            </ul>
+          </li>
+        </ul>
 
-        </div>
       </div>
-    </nav>
+    </div>
+  </nav>
 
-    <section class="row">
-      <div class="col-lg-offset-5">
-        <h1>Vos messages</h1>      
+  <section class="row">
+    <div class="col-lg-offset-5">
+      <h1>Vos messages</h1>      
     </div>    
-</section>
+  </section>
 
-<section class="row">
-        <aside class="col-sm-3" style="background-color: #e3f2fd;">
-            <h1 class="text-center">Messages non lus</h1>            
-            <p class="publication">
+  <section class="row">
+    <aside class="col-sm-3" style="background-color: #e3f2fd;">
+      <h1 class="text-center">Messages non lus</h1>            
+      <p class="publication">
         Albert vous a envoyé un message 
-   </p>
-   <p class="publication">
+      </p>
+      <p class="publication">
         Albert vous a envoyé un message 
-   </p>
-   <h1 class="text-center">Messages lus</h1>            
-            <p class="publication">
+      </p>
+      <h1 class="text-center">Messages lus</h1>            
+      <p class="publication">
         Michel vous a envoyé un message 
-   </p>
-   <p class="publication">
+      </p>
+      <p class="publication">
         Philippe vous a envoyé un message 
-   </p>
-        </aside>
+      </p>
+    </aside>
 
-        <div class="col-sm-8" style="background-color: #e3f2fd;">
+    <div class="col-sm-8" style="background-color: #e3f2fd;">
       
-       <h1 class="text-center">Message en Lecture</h1>
+     <h1 class="text-center">Message en Lecture</h1>
 
-    <div class="panel" style="height:auto">
+     <div class="panel" style="height:auto">
 
       <h3 style ="font-weight : bold"> Robert</h3>
 
     </div>
-        </div>
-      </section>
+  </div>
+</section>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
-<script src="../js/bootstrap.js"></script>
-    </html>
+<div class="post col-sm-offset-5">
+  <a class="btn btn-primary btn-lg " href="#" role="button" data-backdrop="false" data-toggle="modal" data-target="monModal">Envoyer un message</a>
+  <!-- Modale HTML -->
+  <div id="monModal" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">Message</h4>
+        </div>
+        <div class="modal-body">
+          <form id="Form" action="message.php" method="POST">
+            <div class="form-group">
+              <label for="dest">Destinataire : </label>
+              <input id="dest" type="text" class="form-control" name="dest" required>
+            </div>
+            <div class="form-group">
+              <label for="mes">Ecrivez votre message : </label>
+              <textarea type="text" name="mes" id="mes" class="form-control"></textarea>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button  class="btn btn-default" data-dismiss="modal">Annuler</button>
+            <button type="submit" class="btn btn-primary">Envoyer</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</html>
 

@@ -46,51 +46,28 @@
             </ul>
           </li>
         </ul>
-
       </div>
     </div>
   </nav>
 
-  <div class="col-md-3 post "  style="background-color: #e3f2fd;">
-    <h1>Publier</h1>
-    <form id="Form"  action="publication.php" method="POST">
-      <label for="publication">Ecrivez votre message</label>
-      <textarea type="text" name="publication" id="publication" class="form-control"></textarea>
-      <div class="row-fluid">
-        <a href="#" type='submit' class="btn btn-primary" role="button">Publier</a>
-        <form enctype="multipart/form-data" action="piecejointe.php" method="post">
-          <fieldset>
-            <p>
-
-              <label for="publier" title="publication">Ajouter une pièce jointe</label>
-              <input type="hidden" name="MAX_FILE_SIZE" value="<?php echo MAX_SIZE; ?>" />
-              <input name="fichier" type="file" id="publier" />
-              <input type="submit" width="auto" height="28" class="d-inline-block align-top" name="submit" value="Valider" />     
-            </p>
-          </fieldset>
-        </form>
-      </div>
-    </div>
-    <div class="col-md-5 sidebar" style="background-color: #e3f2fd;">
-      <h1>Fil d'actualité</h1>
-      <p class="publication">
-       <img src="../ressources/logoece.png" width="auto" height="28" class="d-inline-block align-top">
-       : Bonjour, bienvenue sur notre site, 
-
-
-     </p>
-   </div>
- </div>
- <div class="col-md-3 contact"    style="background-color: #e3f2fd;">
-  <h1>Amis</h1>
-  <div class="panel" style="height:500px">
-
-  </div>
-
-</div>
-
-
-</div>
-
-</html>
+<?php
+session_start();
+$connect=$_SESSION['ID'];
+$database = "prjet_web";
+$db_handle = mysqli_connect('localhost','root','');
+$db_found = mysqli_select_db($db_handle, $database);
+if ($db_found) {
+	$sql = "SELECT * FROM `personne`";
+	$result = mysqli_query($db_handle, $sql);
+	echo("<div align=\"center\" class=\"jumbotron\" style=\"background-color:#e3f2fd;\">"."<h2>Table des utilisateurs</h2>"." <br \>"."<h3>Code_Personne | Nom | Prenom | Pseudo | Email | Mot_de_passe</h3>"."<br \><br \>"." <a href=\"ajouter.php\" class=\"btn btn-default\">ajouter</a></div>"   );
+	while($resultat=mysqli_fetch_object($result)){
+		echo(
+           "<div align=\"center\" class=\"jumbotron\" style=\"background-color:#e3f2fd;\">"
+           .$resultat->Code_Personne."  ".$resultat->Nom." ".$resultat->Prenom." ".$resultat->Pseudo." ".$resultat->Email." ".$resultat->Mot_de_passe." "
+           ." <a href=\"modification.php?idPersonne=".$resultat->Code_Personne."\" class=\"btn btn-default\">modifier</a>"."    "
+           ." <a href=\"supprimer.php?idPersonne=".$resultat->Code_Personne."\" class=\"btn btn-default\">supprimer</a></div>"          
+       ) ;		
+	}	
+}
+?>
 

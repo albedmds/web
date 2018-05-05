@@ -1,4 +1,5 @@
 <?php
+session_start();
 $Nom = isset($_POST["Nom"])? $_POST["Nom"]: "";
 $Prenom = isset($_POST["Prenom"])? $_POST["Prenom"]: "";
 $Pseudo = isset($_POST["Pseudo"])? $_POST["Pseudo"]: "";
@@ -11,7 +12,7 @@ if ($db_found) {
 $sql = "INSERT INTO `personne`( `Nom`, `Prenom`, `Pseudo`, `Email`, `Mot_de_Passe`) VALUES ('$Nom', '$Prenom', '$Pseudo','$Email','$Mot_de_Passe')";
 $result = mysqli_query($db_handle, $sql);
 echo "<script>
-window.location.href='inscription_uti.html';  
+window.location.href='inscription_uti.php';  
 </script>";
 }
 else {
